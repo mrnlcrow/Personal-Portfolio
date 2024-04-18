@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mrinal's Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- google materials symbols and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <div id="header">
@@ -13,14 +15,13 @@
                 <img src="images/logo.png"  class="logo">
                 <ul>
                     <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
             <div class="header-text">
-                <p>Frontend Developer</p>
+                <p>Software Engineer</p>
                 <h1>Hi, I'm <span>Mrinal</span> <br>Bhattarai From Kathmandu</h1>
             </div>
         </div>
@@ -34,21 +35,95 @@
                 </div>
                 <div class="about-col-2">
                     <h1 class="sub-title">About Me</h1>
-                    <p>
+                    <p class="about-me-para">
                         A part time student and a full time learner with an avid interest in Artificial Intelligence, its applications and implications. Currently a non-professional web developer with technical knowledge and understanding in the MERN stack. Based in Kathmandu, Nepal, I am a 22 year old technophile looking for new technologies to learn and 
                         understand.
                     </p>
                     <div class="tab-titles">
-                        <p class="tab-links active-link">Skills</p>
-                        <p class="tab-links">Experience</p>
-                        <p class="tab-links">Education</p>
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>                     
                     </div>
-                    <div class="tab-contents">
-                        <ul></ul>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span><b>UI/UX</b></span><br>Designing Web/App interfaces</li>
+                            <li><span><b>Web Development</b></span><br>Web App Development</li>
+                            <li><span><b>App Development</b></span><br>Building Android/iOS Apps</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span><b>2022</b></span><br>UI/UX Design Training in New Summit College</li>
+                            <li><span><b>2021-</b></span><br>B.Sc.CSIT Degree from TU</li>
+                            <li><span><b>2023</b></span><br>React Training from Coursera</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+<!-- ----------portfolio----------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work1.jpg">
+                <div class="layer">
+                    <h3><b>Social Media App</b></h3>
+                    <p>The app connects you to the talented people around the world. Download it from my github.</p>
+                    <a href="#"><span class="material-symbols-outlined">
+                        display_external_input
+                    </span></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work2.jpg">
+                <div class="layer">
+                    <h3><b>Role Play Game App</b></h3>
+                    <p>The web app allows you to play a simple role playing fight game i developed. Download it from my github.</p>
+                    <a href="#"><span class="material-symbols-outlined">
+                        display_external_input
+                    </span></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work3.jpg">
+                <div class="layer">
+                    <h3><b>ToDoList App</b></h3>
+                    <p>The web app lets you manage your schedule with a checkbox for your daily activities. Download it from my github.</p>
+                    <a href="#"><span class="material-symbols-outlined">
+                        display_external_input
+                    </span></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+            
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link"); 
+        //'event.currentTarget' gets the element that triggered the event
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
 </body>
 </html>
