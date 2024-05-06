@@ -1,7 +1,7 @@
 *{
     margin:0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     box-sizing: border-box;
 }
 /* root element */
@@ -66,15 +66,17 @@ nav ul li a:hover::after{
     margin-top:20%;
     font-size: 40px;
 }
-.header-text h1{
+.header-text h1 {
     font-size: 60px;
     margin-top:20px;
-
+    -webkit-text-stroke: 0.1px white; 
+}
+.header-text p{
+    -webkit-text-stroke: 0.1px white; 
 }
 .header-text h1 span {
     color:rgb(255, 255, 0);
     -webkit-text-stroke: 1px black; 
-    text-stroke: 1px black;
 }
 
 
