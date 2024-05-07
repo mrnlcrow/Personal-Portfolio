@@ -335,11 +335,6 @@ form .btn2{
 .copyright i{
     color: #ff004f;
 }
-#msg{
-    color: #61b752;
-    margin-top: -40px;
-    display: block;
-}
 
 
 /* CSS for small screens */
@@ -355,10 +350,13 @@ nav .fas{
     }
     .header-text{
         margin-top: 100%;
-        font-size: 16px;
+        font-size: 18px;
     }
     .header-text h1{
         font-size: 30px;
+    }
+    .header-text p{
+        font-weight: bolder;
     }
     nav .fas{
         display: block;
